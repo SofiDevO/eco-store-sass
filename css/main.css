@@ -1,15 +1,12 @@
-html {
-  font-size: 62.5%;
-}
-
-body {
-  margin: 0;
+* {
+  box-sizing: border-box;
   padding: 0;
+  margin: 0;
 }
 
-nav {
-  width: 100%;
-  height: 10rem;
+html {
+  /* 62.5% of 16px browser font size is 10px */
+  font-size: 62.5%;
 }
 
 a {
@@ -20,12 +17,146 @@ li {
   list-style: none;
 }
 
-.main {
-  background-color: #FFEFE7;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffefe7;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6.75rem;
+  color: #7c6a0a;
+  align-items: center;
+}
+nav p {
+  font-size: 3rem;
+}
+nav .icons {
+  display: flex;
+  gap: 4rem;
+}
+nav .icons button {
+  background: none;
+  border: none;
+}
+nav .icons .svg {
+  filter: invert(36%) sepia(98%) saturate(394%) hue-rotate(13deg) brightness(91%) contrast(95%);
+  width: 4.8rem;
+}
+
+article {
+  display: flex;
+  justify-content: space-around;
+  color: #7c6a0a;
+  width: auto;
+  padding: 6.5rem;
+}
+article .impact-section {
+  width: 68%;
+}
+article h1 {
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 6rem 0;
+}
+article .parrrafo {
+  width: 56%;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+article button {
+  background-color: #fa9500;
+  border: none;
+  border-radius: 3.5rem;
+  display: flex;
+  width: 26.1rem;
+  height: 7.3rem;
+  padding: 2.1rem 5.5rem 2.2rem 3.6rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7rem;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+}
+article img {
+  width: 45rem;
+  height: 69.6rem;
+  border-radius: 1.5rem;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  background-color: aqua;
+  padding: 6rem;
+}
+section h2 {
+  color: #7c6a0a;
+  font-size: 5rem;
+}
+
+.product-section {
+  background: linear-gradient(90deg, rgba(160, 160, 160, 0.662) -10%, rgba(153, 152, 152, 0.451) 45%), url("../assets/img/citricos.jpg");
+  background-size: cover;
+  background-position: top;
+  color: #7c6a0a;
+}
+.product-section .product-image {
+  padding: 4.1rem;
+}
+.product-section .product-image h2 {
+  font-weight: 300;
+  padding-bottom: 6rem;
+}
+.product-section .product-image h3 {
+  font-size: 2.5rem;
+}
+.product-section .product-image p {
+  font-size: 1.5rem;
+}
+.product-section .healthcare .product-card {
+  width: 32.4rem;
+  height: 50.2rem;
+  display: flex;
+  background: rgba(255, 218, 198, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  flex-direction: column;
+  align-items: center;
+}
+.product-section .healthcare .icono {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1.4rem 1.5rem;
+}
+.product-section .healthcare .icono img {
+  width: 3.1rem;
+}
+.product-section .healthcare .card-image {
+  width: 24.1012rem;
+  height: 29.9637rem;
+  border-radius: 0.65rem;
 }
 
 footer {
-  background-color: #FA9500;
+  background-color: #fa9500;
   width: 100%;
   height: 50rem;
 }/*# sourceMappingURL=main.css.map */

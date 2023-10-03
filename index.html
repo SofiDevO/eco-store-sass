@@ -14,38 +14,64 @@
 <body>
     <nav>
         <p>Eco Store</p>
-        <button class="profile">
-            <svg></svg>
-        </button>
-        <button class="whishlist">
-            <svg></svg>
-        </button>
-        <button class="cart">
-            <svg></svg>
-        </button>
+        <div class="icons">
+            <button class="profile">
+                <img class="svg" src="./assets/svg/profile.svg" alt="icono perfil">
+            </button>
+            <button class="whishlist">
+                <img class="svg" src="./assets/svg/heart.svg" alt="icono corazon">
+            </button>
+            <button class="cart">
+                <img class="svg" src="./assets/svg/shopping-cart.svg" alt="icono carrito">
+            </button>
+        </div>
     </nav>
     <main class="main-section">
         <article>
-            <div class="impact">
+            <div class="impact-section">
                 <h1>Impacto ecológico</h1>
-                <p>Debido al impacto ambiental siendo las acciones humanas las que modifican el ambiente, Eco-store se
-                    compromete a elaborar sus productos de manera artesanal y con materiales que favorecen al cuidado
-                    del medio ambiente.</p>
-                <button>Conoce más</button>
+                <div class="parrrafo">
+                    <p>Debido al impacto ambiental siendo las acciones humanas las que modifican el ambiente, Eco-store
+                        se
+                        compromete a elaborar sus productos de manera artesanal y con materiales que favorecen al
+                        cuidado
+                        del medio ambiente.</p>
+                </div>
+                <button>
+                    Conoce más 
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="arrow-right">
+                        <path id="Vector" d="M14 5L21 12M21 12L14 19M21 12H3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        </svg>
+                        
+                </button>
             </div>
             <div class="image-section">
-                <img src="" alt="">
+                <img src="./assets/img/main-2.jpg" alt="">
             </div>
         </article>
-        <scetion class="product-section">
+        <section class="product-section">
             <div class="healthcare">
                 <h2>Cuidado de la Salud</h2>
+                <div class="card-section">
+                    <div class="product-card">
+                        <div class="icono">
+                            <img src="./assets/svg/heart.svg" alt="heart icon">
+                        </div>
+                        <div class="product-image">
+                            <img class="card-image" src="./assets/img/products/toothbrush.jpg" alt="Cepillo de Dientes">
+                            <h3>Cepillo de Bambú</h3>
+                            <p>Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="furniture">
                 <h2>Decoración del hogar</h2>
             </div>
-        </scetion>
-        <scetion class="info-secction">
+        </section>
+        <section class="info-secction">
             <div class="about-us">
                 <h2>¿Por qué nosotros? </h2>
                 <div class="earth">
@@ -67,7 +93,7 @@
                 <h3>Centro Mayor Centro Comercial</h3>
                 <p>Cl. 38A Sur #34d-51, Bogotá, Colombia</p>
             </div>
-        </scetion>
+        </section>
     </main>
     <footer>
         <h3>Eco-store </h3>
