@@ -23,6 +23,9 @@ body {
   background-color: #ffefe7;
   font-family: "IBM Plex Sans", sans-serif;
 }
+body svg path {
+  stroke: currentColor;
+}
 
 nav {
   width: 100%;
@@ -105,6 +108,7 @@ section {
 section h2 {
   color: #7c6a0a;
   font-size: 5rem;
+  padding-bottom: 6rem;
 }
 
 .product-section {
@@ -113,18 +117,9 @@ section h2 {
   background-position: top;
   color: #7c6a0a;
 }
-.product-section .product-image {
-  padding: 4.1rem;
-}
-.product-section .product-image h2 {
-  font-weight: 300;
-  padding-bottom: 6rem;
-}
-.product-section .product-image h3 {
-  font-size: 2.5rem;
-}
-.product-section .product-image p {
-  font-size: 1.5rem;
+.product-section .card-section {
+  display: flex;
+  justify-content: space-evenly;
 }
 .product-section .healthcare .product-card {
   width: 32.4rem;
@@ -137,17 +132,30 @@ section h2 {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   flex-direction: column;
-  align-items: center;
 }
 .product-section .healthcare .icono {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  padding: 1.4rem 1.5rem;
+  padding: 0.8rem 0.8rem;
 }
 .product-section .healthcare .icono img {
   width: 3.1rem;
+  filter: invert(36%) sepia(98%) saturate(394%) hue-rotate(13deg) brightness(91%) contrast(95%);
+}
+.product-section .healthcare .product-image {
+  padding: 1.2rem 4.5rem 4.5rem;
+}
+.product-section .healthcare .product-image h2 {
+  font-weight: 300;
+  padding-bottom: 6rem;
+}
+.product-section .healthcare .product-image h3 {
+  font-size: 2.5rem;
+}
+.product-section .healthcare .product-image p {
+  font-size: 1.5rem;
 }
 .product-section .healthcare .card-image {
   width: 24.1012rem;

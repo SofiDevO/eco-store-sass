@@ -27,6 +27,9 @@ body {
 	padding: 0;
 	background-color: $primary-color;
 	font-family: $font-stack;
+	svg path {
+		stroke: currentColor;
+	}
 }
 
 nav {
@@ -109,26 +112,23 @@ section {
 	h2 {
 		color: $primary-text-color;
 		font-size: 5rem;
+		padding-bottom: 6rem;
 	}
 }
 
 .product-section {
-	background:linear-gradient(90deg, rgba(160, 160, 160, 0.662) -10%, rgba(153, 152, 152, 0.451) 45%), url("../assets/img/citricos.jpg");
+	background: linear-gradient(
+			90deg,
+			rgba(160, 160, 160, 0.662) -10%,
+			rgba(153, 152, 152, 0.451) 45%
+		),
+		url("../assets/img/citricos.jpg");
 	background-size: cover;
 	background-position: top;
 	color: $primary-text-color;
-	.product-image{
-		padding: 4.1rem;
-		h2 {
-			font-weight: 300;
-			padding-bottom: 6rem;
-		}
-		h3{
-			font-size: 2.5rem;
-		}
-		p{
-			font-size: 1.5rem;
-		}
+	.card-section{
+		display: flex;
+		justify-content: space-evenly;
 	}
 	.healthcare {
 		.product-card {
@@ -142,16 +142,29 @@ section {
 			border-radius: 10px;
 			border: 1px solid rgba(255, 255, 255, 0.18);
 			flex-direction: column;
-			align-items: center;
 		}
 		.icono {
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
 			width: 100%;
-			padding: 1.4rem 1.5rem;
+			padding: 0.8rem 0.8rem;
 			img {
 				width: 3.1rem;
+				filter: invert(36%) sepia(98%) saturate(394%) hue-rotate(13deg)
+					brightness(91%) contrast(95%);
+			}
+		}
+		.product-image {
+			padding: 1.2rem 4.5rem 4.5rem;			h2 {
+				font-weight: 300;
+				padding-bottom: 6rem;
+			}
+			h3 {
+				font-size: 2.5rem;
+			}
+			p {
+				font-size: 1.5rem;
 			}
 		}
 		.card-image {
@@ -159,9 +172,9 @@ section {
 			height: 29.9637rem;
 			border-radius: 0.65rem;
 		}
-		
 	}
 }
+
 footer {
 	$background: $quaternion-color;
 	background-color: $background;
