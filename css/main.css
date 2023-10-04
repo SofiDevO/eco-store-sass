@@ -102,7 +102,7 @@ article img {
 section {
   width: 100%;
   height: auto;
-  background-color: aqua;
+  background-color: #ffefe7;
   padding: 6rem;
 }
 section h2 {
@@ -112,55 +112,69 @@ section h2 {
 }
 
 .product-section {
-  background: linear-gradient(90deg, rgba(160, 160, 160, 0.662) -10%, rgba(153, 152, 152, 0.451) 45%), url("../assets/img/citricos.jpg");
   background-size: cover;
   background-position: top;
   color: #7c6a0a;
 }
 .product-section .card-section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 27rem;
+       column-gap: 27rem;
+  row-gap: 10rem;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 7rem;
 }
-.product-section .healthcare .product-card {
+.product-section .healthcare .product-card, .product-section .furniture .product-card {
   width: 32.4rem;
   height: 50.2rem;
   display: flex;
-  background: rgba(255, 218, 198, 0.5);
+  background: rgba(255, 218, 198, 0.674);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.286);
   flex-direction: column;
 }
-.product-section .healthcare .icono {
+.product-section .healthcare .icono, .product-section .furniture .icono {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 100%;
   padding: 0.8rem 0.8rem;
 }
-.product-section .healthcare .icono img {
+.product-section .healthcare .icono img, .product-section .furniture .icono img {
   width: 3.1rem;
   filter: invert(36%) sepia(98%) saturate(394%) hue-rotate(13deg) brightness(91%) contrast(95%);
 }
-.product-section .healthcare .product-image {
+.product-section .healthcare .product-image, .product-section .furniture .product-image {
   padding: 1.2rem 4.5rem 4.5rem;
 }
-.product-section .healthcare .product-image h2 {
+.product-section .healthcare .product-image h2, .product-section .furniture .product-image h2 {
   font-weight: 300;
   padding-bottom: 6rem;
 }
-.product-section .healthcare .product-image h3 {
+.product-section .healthcare .product-image h3, .product-section .furniture .product-image h3 {
   font-size: 2.5rem;
 }
-.product-section .healthcare .product-image p {
+.product-section .healthcare .product-image p, .product-section .furniture .product-image p {
   font-size: 1.5rem;
 }
-.product-section .healthcare .card-image {
+.product-section .healthcare .card-image, .product-section .furniture .card-image {
   width: 24.1012rem;
   height: 29.9637rem;
   border-radius: 0.65rem;
+}
+.product-section .furniture .product-card {
+  background: rgba(186, 189, 141, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 footer {

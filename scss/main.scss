@@ -1,7 +1,7 @@
 $primary-color: #ffefe7;
 $secundary-color: #ffdac6;
 $tertiary-color: #babd8d;
-$quaternion-color: #fa9500;
+$quaternary-color: #fa9500;
 $primary-text-color: #7c6a0a;
 $font-stack: "IBM Plex Sans", sans-serif;
 
@@ -107,7 +107,7 @@ article {
 section {
 	width: 100%;
 	height: auto;
-	background-color: aqua;
+	background-color:$primary-color;
 	padding: 6rem;
 	h2 {
 		color: $primary-text-color;
@@ -117,30 +117,30 @@ section {
 }
 
 .product-section {
-	background: linear-gradient(
-			90deg,
-			rgba(160, 160, 160, 0.662) -10%,
-			rgba(153, 152, 152, 0.451) 45%
-		),
-		url("../assets/img/citricos.jpg");
 	background-size: cover;
 	background-position: top;
 	color: $primary-text-color;
-	.card-section{
+	.card-section {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
+		align-items: center;
+		column-gap: 27rem;
+		row-gap: 10rem;
+		flex-wrap: wrap;
+		width: 100%;
+		padding-bottom: 7rem;
 	}
 	.healthcare {
 		.product-card {
 			width: 32.4rem;
 			height: 50.2rem;
 			display: flex;
-			background: rgba(255, 218, 198, 0.5);
+			background: rgba(255, 218, 198, 0.674);
 			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 			backdrop-filter: blur(5.5px);
 			-webkit-backdrop-filter: blur(5.5px);
 			border-radius: 10px;
-			border: 1px solid rgba(255, 255, 255, 0.18);
+			border: 1px solid rgba(255, 255, 255, 0.286);
 			flex-direction: column;
 		}
 		.icono {
@@ -156,7 +156,8 @@ section {
 			}
 		}
 		.product-image {
-			padding: 1.2rem 4.5rem 4.5rem;			h2 {
+			padding: 1.2rem 4.5rem 4.5rem;
+			h2 {
 				font-weight: 300;
 				padding-bottom: 6rem;
 			}
@@ -173,10 +174,21 @@ section {
 			border-radius: 0.65rem;
 		}
 	}
+	.furniture {
+		@extend .healthcare;
+		.product-card {
+			background: rgba(186, 189, 141, 0.7);
+			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+			backdrop-filter: blur(6px);
+			-webkit-backdrop-filter: blur(6px);
+			border-radius: 10px;
+			border: 1px solid rgba(255, 255, 255, 0.18);
+		}
+	}
 }
 
 footer {
-	$background: $quaternion-color;
+	$background: $quaternary-color;
 	background-color: $background;
 	width: 100%;
 	height: 50rem;
