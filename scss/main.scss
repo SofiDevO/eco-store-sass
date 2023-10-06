@@ -1,3 +1,5 @@
+
+
 $primary-color: #ffefe7;
 $secundary-color: #ffdac6;
 $tertiary-color: #babd8d;
@@ -5,16 +7,15 @@ $quaternary-color: #fa9500;
 $primary-text-color: #7c6a0a;
 $font-stack: "IBM Plex Sans", sans-serif;
 
-@mixin flexCenter($direction,$content, $aling){
+@mixin flexCenter($direction, $content, $aling) {
 	display: flex;
 	flex-direction: $direction;
 	justify-content: $content;
 	align-items: $aling;
 }
 
-
-@mixin buttonStyle{
-	button{
+@mixin buttonStyle {
+	button {
 		background: none;
 		border: none;
 	}
@@ -42,17 +43,18 @@ body {
 	padding: 0;
 	background-color: $primary-color;
 	font-family: $font-stack;
-	svg path {
-		stroke: currentColor;
-	}
 }
 
 nav {
 	width: 100%;
 	height: 10rem;
-	@include flexCenter(row,space-between, center );
+	@include flexCenter(row, space-between, center);
 	padding: 0 6.75rem;
 	color: $primary-text-color;
+	background-color: #FFEFE7;
+	position: fixed;
+	z-index: 999;
+	padding: 0 2.1rem;
 	p {
 		font-size: 3rem;
 	}
@@ -66,14 +68,34 @@ nav {
 			width: 4.8rem;
 		}
 	}
+	@media screen and (max-width:950px) {
+		height: 8vh;
+		p{
+			font-size: 2rem;
+		}
+		.icons{
+			align-items: center;
+			justify-content: center;
+		}
+	}
 }
 article {
-	@include flexCenter(row,space-around,center );
+	@include flexCenter(row, space-around, center);
 	color: $primary-text-color;
 	width: auto;
-	padding: 6.5rem;
+	padding: 12.5rem 21.5px;
+	@media (max-width:950px){
+		flex-direction: column-reverse;
+		align-items: center;
+		width: 100%;
+		padding: 8.5rem 0;
+	}
 	.impact-section {
 		width: 68%;
+		@media screen and (max-width:950px) {
+			width: 100%;
+			@include flexCenter(column,center ,center )
+		}
 	}
 	h1 {
 		font-size: 6rem;
@@ -81,6 +103,9 @@ article {
 		font-weight: 600;
 		line-height: normal;
 		padding: 6rem 0;
+		@media screen and (max-width:950px) {
+			font-size: 2.8rem;
+		}
 	}
 	.parrrafo {
 		width: 56%;
@@ -88,12 +113,18 @@ article {
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
+		@media screen and (max-width:950px) {
+			font-size: 2rem;
+			width: 100%;
+			padding: 1rem;
+			text-align: center;
+		}
 	}
 	@include buttonStyle;
 	button {
 		background-color: #fa9500;
 		border-radius: 3.5rem;
-		@include flexCenter(row,space-between,center );
+		@include flexCenter(row, space-between, center);
 		width: 26.1rem;
 		height: 7.3rem;
 		padding: 2.1rem 5.5rem 2.2rem 3.6rem;
@@ -103,23 +134,37 @@ article {
 		font-weight: 700;
 		line-height: normal;
 		color: #fff;
+		&:hover{
+			transform: scale(1.1);
+		}
 	}
 	img {
 		width: 45rem;
 		height: 69.6rem;
 		border-radius: 1.5rem;
+		@media screen and (max-width: 950px){
+			width: 33.6rem;
+			height: 36.2rem;
+		}
 	}
 }
 
 section {
 	width: 100%;
 	height: auto;
-	background-color:$primary-color;
+	background-color: $primary-color;
 	padding: 6rem;
 	h2 {
 		color: $primary-text-color;
 		font-size: 5rem;
 		padding-bottom: 6rem;
+	}
+	@media screen and (max-width:950px) {
+		padding: 3rem 1rem;
+		h2{
+			font-size: 2.2rem;
+			padding-bottom: 3rem;
+		}
 	}
 }
 
@@ -128,13 +173,25 @@ section {
 	background-position: top;
 	color: $primary-text-color;
 	.card-section {
-		@include flexCenter(row,center ,center );
+		@include flexCenter(row, center, center);
 		align-items: center;
 		column-gap: 27rem;
 		row-gap: 10rem;
 		flex-wrap: wrap;
 		width: 100%;
 		padding-bottom: 7rem;
+		@media screen and (max-width:768px) {
+			display: flex;
+			column-gap: unset;
+			gap: 3rem;
+			width: 100vw;
+			padding-bottom: 7rem;
+			padding-top: 5rem;
+			overscroll-behavior: auto;
+			overflow: auto;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+		}
 	}
 	.healthcare {
 		.product-card {
@@ -192,6 +249,81 @@ section {
 		}
 	}
 }
+
+.about-us {
+	@media screen and (max-width:  950px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	h2 {
+		font-weight: bold;
+		padding-bottom: 6rem;
+	}
+	.mission-section {
+		@include flexCenter(row, space-evenly, center);
+		padding-bottom: 7rem;
+		@media screen and (max-width:  950px) {
+			@include flexCenter(column,center,center );
+			gap: 10rem;
+			h2{
+				padding-bottom: 10rem
+			}
+		}
+	}
+	.earth {
+		@include flexCenter(row, center, center);
+		align-items: center;
+		gap: 4rem;
+		color: #e86424;
+		font-size: 3rem;
+		width: 61.400000000000006rem;
+		height: 26.2rem;
+		text-align: center;
+		img{
+			width: 16.4rem;
+		}
+		@media screen and (max-width:  950px) {
+			@include flexCenter(column,center,center );
+			width: 100%;
+			font-size: 2.1rem;
+			img{
+				width: 9rem;
+			}
+		}
+	}
+	.inovation {
+		@extend .earth;
+	}
+}
+.gallery{
+	h2 {
+		font-weight: bold;
+		padding-bottom: 6rem;
+	} 
+	.gallery-image{
+		@include flexCenter(row,center,center );
+		gap: 5.6rem;
+		img{
+			width: 39.6rem;
+			height: 39.8rem;
+			object-fit: cover;
+			object-position: .5rem 35%;
+			border-radius: 1.6rem;
+			&:hover{
+				transform: scale(1.1);
+			}
+		}
+		@media screen and (max-width:950px) {
+			@include flexCenter(column,center,center);
+			img{
+				width: 29.6rem;
+				height: 29.7495rem;
+			}
+		}
+	}
+}
+		
 
 footer {
 	$background: $quaternary-color;

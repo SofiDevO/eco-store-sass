@@ -4,28 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/hamburger.css">
     <title>eco-store</title>
 </head>
 
 <body>
-    <nav>
+    <nav >
         <p>Eco Store</p>
-        <div class="icons">
-            <button class="profile">
-                <img class="svg" src="./assets/svg/profile.svg" alt="icono perfil">
+
+        <div class="icons header__nav__menu panel" id="panel">
+            <button class="profile header__menu-link">
+                <img class="svg header__menu-link" src="./assets/svg/profile.svg" alt="icono perfil">
             </button>
-            <button class="whishlist">
-                <img class="svg" src="./assets/svg/heart.svg" alt="icono corazon">
+            <button class="whishlist header__menu-link">
+                <img class="svg header__menu-link" src="./assets/svg/heart.svg" alt="icono corazon">
             </button>
-            <button class="cart">
-                <img class="svg" src="./assets/svg/shopping-cart.svg" alt="icono carrito">
+            <button class="cart header__menu-link">
+                <img class="svg header__menu-link" src="./assets/svg/shopping-cart.svg" alt="icono carrito">
             </button>
         </div>
+        <!-- Mobile menu (hamburger) -->
+        <button class="panel-btn hamburger hamburger--emphatic" type="button" aria-label="menu">
+           <span class="hamburger-box">
+               <span class="hamburger-inner" id="hamburguesa"></span>
+           </span>
+       </button>
     </nav>
+
+
     <main class="main-section">
         <article>
             <div class="impact-section">
@@ -38,13 +52,14 @@
                         del medio ambiente.</p>
                 </div>
                 <button>
-                    Conoce más 
+                    Conoce más
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="arrow-right">
-                        <path id="Vector" d="M14 5L21 12M21 12L14 19M21 12H3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="Vector" d="M14 5L21 12M21 12L14 19M21 12H3" stroke="#FFFFFF" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
                         </g>
-                        </svg>
-                        
+                    </svg>
+
                 </button>
             </div>
             <div class="image-section">
@@ -92,7 +107,8 @@
                         <div class="product-image">
                             <img class="card-image" src="./assets/img/products/organic-kit.jpg" alt="Kit de viaje">
                             <h3>Kit de viaje</h3>
-                            <p>Incluye peine y cepillo de bambú, jabón orgánico de eucalipto y shampoo tamaño de viaje.</p>
+                            <p>Incluye peine y cepillo de bambú, jabón orgánico de eucalipto y shampoo tamaño de viaje.
+                            </p>
                         </div>
                     </div>
                     <div class="product-card">
@@ -216,18 +232,28 @@
         <section class="info-secction">
             <div class="about-us">
                 <h2>¿Por qué nosotros? </h2>
-                <div class="earth">
-                    <img src="" alt="">
-                </div>
-                <div class="inovation">
-                    <img src="" alt="">
+                <div class="mission-section">
+                    <div class="earth">
+                        <img src="./assets/img/earth.png" alt="Ícono Planeta">
+                        <p>Compromiso con el medio ambiente garantizando
+                            el uso de materiales 100% reciclables.
+                        </p>
+                    </div>
+                    <div class="inovation">
+                        <img src="./assets/img/ecology.png" alt="Ícono ecología">
+                        <p>Innovando con estilo el diseño de nuestros
+                            muebles es único.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="galery">
+            <div class="gallery">
                 <h2>Galería de estilos</h2>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
+                <div class="gallery-image">
+                    <img src="./assets/img/gallery-1.jpg" alt="imagen de galeria">
+                    <img src="./assets/img/gallery-2.jpg" alt="imagen de galeria">
+                    <img src="./assets/img/gallery-3.jpg" alt="imagen de galeria">
+                </div>
             </div>
             <div class="location">
                 <h2>Encuéntranos en</h2>
@@ -252,6 +278,8 @@
         </ul>
 
     </footer>
+
+    <script src="./js/hamburger.js"></script>
 </body>
 
 </html>

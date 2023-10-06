@@ -23,9 +23,6 @@ body {
   background-color: #ffefe7;
   font-family: "IBM Plex Sans", sans-serif;
 }
-body svg path {
-  stroke: currentColor;
-}
 
 nav {
   width: 100%;
@@ -36,6 +33,10 @@ nav {
   align-items: center;
   padding: 0 6.75rem;
   color: #7c6a0a;
+  background-color: #FFEFE7;
+  position: fixed;
+  z-index: 999;
+  padding: 0 2.1rem;
 }
 nav p {
   font-size: 3rem;
@@ -52,6 +53,18 @@ nav .icons .svg {
   filter: invert(36%) sepia(98%) saturate(394%) hue-rotate(13deg) brightness(91%) contrast(95%);
   width: 4.8rem;
 }
+@media screen and (max-width: 950px) {
+  nav {
+    height: 8vh;
+  }
+  nav p {
+    font-size: 2rem;
+  }
+  nav .icons {
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 article {
   display: flex;
@@ -60,10 +73,27 @@ article {
   align-items: center;
   color: #7c6a0a;
   width: auto;
-  padding: 6.5rem;
+  padding: 12.5rem 21.5px;
+}
+@media (max-width: 950px) {
+  article {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    padding: 8.5rem 0;
+  }
 }
 article .impact-section {
   width: 68%;
+}
+@media screen and (max-width: 950px) {
+  article .impact-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 article h1 {
   font-size: 6rem;
@@ -72,12 +102,25 @@ article h1 {
   line-height: normal;
   padding: 6rem 0;
 }
+@media screen and (max-width: 950px) {
+  article h1 {
+    font-size: 2.8rem;
+  }
+}
 article .parrrafo {
   width: 56%;
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media screen and (max-width: 950px) {
+  article .parrrafo {
+    font-size: 2rem;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
 }
 article button {
   background: none;
@@ -100,10 +143,19 @@ article button {
   line-height: normal;
   color: #fff;
 }
+article button:hover {
+  transform: scale(1.1);
+}
 article img {
   width: 45rem;
   height: 69.6rem;
   border-radius: 1.5rem;
+}
+@media screen and (max-width: 950px) {
+  article img {
+    width: 33.6rem;
+    height: 36.2rem;
+  }
 }
 
 section {
@@ -116,6 +168,15 @@ section h2 {
   color: #7c6a0a;
   font-size: 5rem;
   padding-bottom: 6rem;
+}
+@media screen and (max-width: 950px) {
+  section {
+    padding: 3rem 1rem;
+  }
+  section h2 {
+    font-size: 2.2rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .product-section {
@@ -135,6 +196,21 @@ section h2 {
   flex-wrap: wrap;
   width: 100%;
   padding-bottom: 7rem;
+}
+@media screen and (max-width: 768px) {
+  .product-section .card-section {
+    display: flex;
+    -moz-column-gap: unset;
+         column-gap: unset;
+    gap: 3rem;
+    width: 100vw;
+    padding-bottom: 7rem;
+    padding-top: 5rem;
+    overscroll-behavior: auto;
+    overflow: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 }
 .product-section .healthcare .product-card, .product-section .furniture .product-card {
   width: 32.4rem;
@@ -184,6 +260,101 @@ section h2 {
   -webkit-backdrop-filter: blur(6px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media screen and (max-width: 950px) {
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.about-us h2 {
+  font-weight: bold;
+  padding-bottom: 6rem;
+}
+.about-us .mission-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 7rem;
+}
+@media screen and (max-width: 950px) {
+  .about-us .mission-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+  }
+  .about-us .mission-section h2 {
+    padding-bottom: 10rem;
+  }
+}
+.about-us .earth, .about-us .inovation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  gap: 4rem;
+  color: #e86424;
+  font-size: 3rem;
+  width: 61.4rem;
+  height: 26.2rem;
+  text-align: center;
+}
+.about-us .earth img, .about-us .inovation img {
+  width: 16.4rem;
+}
+@media screen and (max-width: 950px) {
+  .about-us .earth, .about-us .inovation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 2.1rem;
+  }
+  .about-us .earth img, .about-us .inovation img {
+    width: 9rem;
+  }
+}
+.gallery h2 {
+  font-weight: bold;
+  padding-bottom: 6rem;
+}
+.gallery .gallery-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5.6rem;
+}
+.gallery .gallery-image img {
+  width: 39.6rem;
+  height: 39.8rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0.5rem 35%;
+     object-position: 0.5rem 35%;
+  border-radius: 1.6rem;
+}
+.gallery .gallery-image img:hover {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 950px) {
+  .gallery .gallery-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery .gallery-image img {
+    width: 29.6rem;
+    height: 29.7495rem;
+  }
 }
 
 footer {

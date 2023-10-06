@@ -1,0 +1,42 @@
+/* Menu hamburguesa */
+.panel-btn {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.panel-btn {
+                padding: 0;
+                display: flex;
+                align-items: center;
+                z-index: 999;
+                width: 4.2rem;
+                filter: invert(34%) sepia(81%) saturate(402%) hue-rotate(13deg) brightness(102%) contrast(107%);
+                height: 9rem;
+	}
+
+	.panel {
+		position: fixed;
+		min-width: 103vw;
+		min-height: 25vh;
+		text-align: center;
+		z-index: 997;
+		top: 0;
+		right: 0;
+		background-color: #ffefe7;
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		transition: transform 0.3s ease;
+		transform: translate(0, -100%);
+
+		/* Animations variables */
+
+		//transform: translate(100%, 0);
+		//transform: translate(-100%, 0);
+		// transform: translate(0, 104%);
+	}
+
+	.panel.is-active {
+		display: flex;
+		align-items: center;
+		transform: translate(0, 0);
+	}
+}
