@@ -33,12 +33,13 @@ nav {
   align-items: center;
   padding: 0 6.75rem;
   color: #7c6a0a;
-  background-color: #FFEFE7;
+  background-color: #ffefe7;
   position: fixed;
   z-index: 999;
   padding: 0 2.1rem;
 }
 nav p {
+  color: #7c6a0a;
   font-size: 3rem;
 }
 nav .icons {
@@ -187,12 +188,13 @@ section h2 {
 .product-section .card-section {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   align-items: center;
-  -moz-column-gap: 27rem;
-       column-gap: 27rem;
-  row-gap: 10rem;
+  align-items: center;
+  -moz-column-gap: 38rem;
+  column-gap: 37rem;
+  row-gap: 9rem;
   flex-wrap: wrap;
   width: 100%;
   padding-bottom: 7rem;
@@ -328,13 +330,13 @@ section h2 {
 .gallery .gallery-image {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 5.6rem;
 }
 .gallery .gallery-image img {
-  width: 39.6rem;
-  height: 39.8rem;
+  width: 48.6rem;
+  height: 48.8rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 0.5rem 35%;
@@ -357,8 +359,77 @@ section h2 {
   }
 }
 
+.location {
+  color: #e86424;
+}
+.location h2 {
+  padding: 7rem 0;
+}
+.location .map {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+  width: 100%;
+  height: 65.6rem;
+}
+.location .map iframe {
+  border: 0;
+  width: 100%;
+  height: 65.5rem;
+}
+.location h3 {
+  font-size: 3.5rem;
+}
+.location p {
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 950px) {
+  .location h3 {
+    font-size: 2rem;
+  }
+  .location p {
+    font-size: 1.5rem;
+  }
+  .location .map {
+    height: 50rem;
+  }
+  .location .map iframe {
+    height: 48rem;
+  }
+}
+
 footer {
   background-color: #fa9500;
   width: 100%;
-  height: 50rem;
+  height: auto;
+  color: #ffefe7;
+  padding: 4rem;
+}
+footer h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  padding-bottom: 4.3rem;
+}
+footer li {
+  padding-bottom: 2.1rem;
+}
+footer li a {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #ffefe7;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 9rem;
+  gap: 3rem;
+}
+footer .social-media img {
+  width: 4.3rem;
 }/*# sourceMappingURL=main.css.map */
